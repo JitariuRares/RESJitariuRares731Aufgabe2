@@ -27,7 +27,7 @@ public class ProdusView {
                 case 6 -> personajController.afiseazaPersonaje();
                 case 7 -> editeazaPersonaj();
                 case 8 -> stergePersonaj();
-//                case 9 -> filtreazaPersonajeDupaOrigine();
+                case 9 -> filtreazaPersonajeDupaOrigine();
 //                case 10 -> afiseazaPersonajeCuProduseDinRegiune();
 //                case 11 -> ruleaza = false;
                 default -> System.out.println("Opțiune invalidă!");
@@ -45,7 +45,7 @@ public class ProdusView {
         System.out.println("6. Afișează personaje");
         System.out.println("7. Editează personaj");
         System.out.println("8. Șterge personaj");
-//        System.out.println("9. Filtrează personaje după origine");
+        System.out.println("9. Filtrează personaje după origine");
 //        System.out.println("10. Afișează personaje cu produse din regiune");
 //        System.out.println("11. Ieșire");
         System.out.print("Alege o opțiune: ");
@@ -122,13 +122,14 @@ public class ProdusView {
         scanner.nextLine();
         personajController.stergePersonaj(id);
     }
-}
 
-//    private void filtreazaPersonajeDupaOrigine() {
-//        System.out.print("Introdu regiunea de origine a personajelor: ");
-//        String origine = scanner.nextLine();
-//        personajController.filtreazaPersonajeDupaOrigine(origine);
-//    }
+
+    private void filtreazaPersonajeDupaOrigine() {
+        System.out.print("Introdu regiunea de origine a personajelor: ");
+        String origine = scanner.nextLine();
+        personajController.filtreazaPersonajeDupaOrigine(origine);
+    }
+}
 
 //    private void afiseazaPersonajeCuProduseDinRegiune() {
 //        System.out.print("Introdu regiunea produsului: ");
